@@ -1,10 +1,14 @@
 n = int(input())
-
-list_students = []
+student = []
+score = set()
 for i in range(n):
-    name = input()
-    score = float(input())
-    list_students.append([name, score])
-for st in list_students:
-    pass
-print(list_students)
+    s = input()
+    x = float(input())
+    score.add(x)
+    student.append([s, x])
+score = list(score)
+name = []
+for st in student:
+    if st[1] == score[1]:
+        name.append(st[0])
+print(name[1])
