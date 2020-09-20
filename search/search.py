@@ -88,30 +88,26 @@ def depthFirstSearch(problem):
     """
     "*** YOUR CODE HERE ***"
     #Checking Step
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    # print "Start:", problem.getStartState()
+    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
 
     #Initial_state
     stack = util.Stack()
-    actions = []
     visited_nodes = []
-    total_cost = 0
-    start_node = problem.getStartState()
-
-    stack.push((start_node, actions, total_cost))
-    
+    stack.push((problem.getStartState(), [], 0))
+    #start = (problem.getStartState(), [], 0)
     while not stack.isEmpty():
-        top = stack.pop()
-        if (problem.isGoalState(top[0])):
-            return top[1]
-        if top[0] not in visited_nodes:
-            visited_nodes.append(top[0])
-            successors = problem.getSuccessors(top[0])
-            for state in successors:
-                if state[0] and state[0] not in visited_nodes:
-                    stack.push((state[0], top[1] + [state[1]], top[2] + state[2]))
-
+        node, action, cost = stack.pop()
+        if (problem.isGoalState(node)):
+            return action
+        if node not in visited_nodes:
+            visited_nodes.append(node)
+            successors = problem.getSuccessors(node)
+            for s in successors:
+                s_node, s_action, s_cost = s
+                if s_node not in visited_nodes:
+                    stack.push((s_node, action + [s_action], cost + s_cost))
     util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
