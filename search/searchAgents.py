@@ -398,6 +398,8 @@ def cornersHeuristic(state, problem):
         currentState = expectCorner
         unvisitedCorners.remove(expectCorner)
         del compareHeuristics[:]
+    #     print heuristic
+    # print "END"
     return heuristic
 
 class AStarCornersAgent(SearchAgent):
