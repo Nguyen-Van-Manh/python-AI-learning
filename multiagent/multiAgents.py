@@ -74,18 +74,6 @@ class ReflexAgent(Agent):
         newScaredTimes = [ghostState.scaredTimer for ghostState in newGhostStates]
         # print action
         "*** YOUR CODE HERE ***"
-        # maxDis = -999999999
-        # listFoods = currentGameState.getFood().asList()
-        # if action == 'Stop':
-        #   return -maxDis
-        # for i in range(len(listFoods)):
-        #   dist = manhattanDistance(listFoods[i], newPos)
-        #   if dist > maxDis:
-        #     dist = maxDis
-        # for state in newGhostStates:
-        #   if state.scaredTimer == 0 and state.getPosition() == newPos:
-        #     return 999999999
-        # return maxDis
         minDis = 999999999
         listFoods = currentGameState.getFood().asList()
         if action == 'Stop':
