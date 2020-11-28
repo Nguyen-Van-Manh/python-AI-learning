@@ -4,3 +4,7 @@
 + Với mỗi position (p) trong legalPostion trả về phân phối so với các vị trí kế nhiệm của bóng ma từ Trạng thái trò chơi đã cho. Cập nhật các khoảng cách trong các vị trí kế nhiệm trả vêf dựa vào beliefs
 ## Problem 3: Exact Inference Full Test
 + Với mỗi action lấy ra từ legal = [a for a in gameState.getLegalPacmanActions()], lấy tất cả successors từ action đó. Lặp lấy toàn bộ vị trí phân phối của ghost, cập nhật giá trị value[action] += 100/khoảng cách đó. Trả về mảng giá trị của các action
+## Problem 4: Approximate Inference Observation
++ Hàm initializeUniformly: list of all possible position a ghost can take
++ Hàm getBeliefDistribution: duyệt từng particle trong self.particles, với mỗi giá trị beliefDistribution[particle] cộng thêm 1.0.
++ Hàm observe: if pacman ate the ghost then the particle position is jail position of the ghost, otherwise the belief is updated as per the trueDistance same as the exactInference class
