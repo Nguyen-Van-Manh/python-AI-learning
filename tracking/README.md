@@ -1,0 +1,2 @@
+## Problem 1: Exact Inference Observation
++ Với mỗi postion (p) trong legalPostion nếu noisyDistance là None có nghĩa là pacman đã ăn con ma và vị trí của con ma, cập nhật jail, nếu không thì cập nhật belief dựa trên trueDistance
