@@ -14,3 +14,5 @@
 + Hàm initializeParticles(self): liệt kê tất cả những vị trí hợp lệ, tráo ngẫu nhiên.
 + Hàm getBeliefDistribution: duyệt tất cả các particle trong self.particles cộng beliefDistribution[particle] thêm 1.0, trả về beliefDistribution
 + Hàm observeState: Nếu số lượng noisyDistance nhỏ hơn số lượng ma thì kết thúc. Ngược lại, duyệt các phần tử trong self.numParticles, gán ghostBelief = 1.0, với mỗi ghostAgent trong self.numGhosts, nếu noisyDistance là None đối với ghostAgent, thì ghost sẽ xuất hiện trong prison của nó, ngược lại cập nhật belief dựa trên trueDistance
+## Problem 7: Joint Particle Filter with Elapse Time
++ Khởi tạo newParticles = [], với mỗi oldParticle trong self.particles, khởi tạo list newParticle. DUyệt qua hết tất cả ghost trong range(self.numGhosts), lấy newPosDist bằng hàm getPositionDistributionForGhost(), thêm vào list newParticle, gán lại self.particles = newParticles
