@@ -10,3 +10,7 @@
 + Hàm observe: if pacman ate the ghost then the particle position is jail position of the ghost, otherwise the belief is updated as per the trueDistance same as the exactInference class
 ## Problem 5: Approximate Inference with Time Elapse
 + Duyệt hết các phần tử trong self.numParticles, lấy ra tất cả vị trí của ghost, lấy mẫu một số vị trí cho particles
+## Problem 6: Joint Particle Filter Observation
++ Hàm initializeParticles(self): liệt kê tất cả những vị trí hợp lệ, tráo ngẫu nhiên.
++ Hàm getBeliefDistribution: duyệt tất cả các particle trong self.particles cộng beliefDistribution[particle] thêm 1.0, trả về beliefDistribution
++ Hàm observeState: Nếu số lượng noisyDistance nhỏ hơn số lượng ma thì kết thúc. Ngược lại, duyệt các phần tử trong self.numParticles, gán ghostBelief = 1.0, với mỗi ghostAgent trong self.numGhosts, nếu noisyDistance là None đối với ghostAgent, thì ghost sẽ xuất hiện trong prison của nó, ngược lại cập nhật belief dựa trên trueDistance
