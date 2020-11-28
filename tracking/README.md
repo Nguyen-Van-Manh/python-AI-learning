@@ -2,3 +2,5 @@
 + Với mỗi position (p) trong legalPostion nếu noisyDistance là None có nghĩa là pacman đã ăn con ma và vị trí của con ma, cập nhật jail, nếu không thì cập nhật belief dựa trên trueDistance
 ## Problem 2: Exact Inference with Time Elapse
 + Với mỗi position (p) trong legalPostion trả về phân phối so với các vị trí kế nhiệm của bóng ma từ Trạng thái trò chơi đã cho. Cập nhật các khoảng cách trong các vị trí kế nhiệm trả vêf dựa vào beliefs
+## Problem 3: Exact Inference Full Test
++ Với mỗi action lấy ra từ legal = [a for a in gameState.getLegalPacmanActions()], lấy tất cả successors từ action đó. Lặp lấy toàn bộ vị trí phân phối của ghost, cập nhật giá trị value[action] += 100/khoảng cách đó. Trả về mảng giá trị của các action
