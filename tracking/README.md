@@ -8,3 +8,5 @@
 + Hàm initializeUniformly: list of all possible position a ghost can take
 + Hàm getBeliefDistribution: duyệt từng particle trong self.particles, với mỗi giá trị beliefDistribution[particle] cộng thêm 1.0.
 + Hàm observe: if pacman ate the ghost then the particle position is jail position of the ghost, otherwise the belief is updated as per the trueDistance same as the exactInference class
+## Problem 5: Approximate Inference with Time Elapse
++ Duyệt hết các phần tử trong self.numParticles, lấy ra tất cả vị trí của ghost, lấy mẫu một số vị trí cho particles
